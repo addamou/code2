@@ -1,0 +1,6 @@
+JWT_SECRET_KEY = code_de_Cryptage_Mot_de_Pass
+
+MONGODB_URL = ' mongodb://127.0.0.1:27017/afuwa'
+
+
+PORT = 5000

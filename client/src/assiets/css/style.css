@@ -1,0 +1,419 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+/** Home css **/
+.Container {
+    position: relative;
+    min-height: 300px;
+    max-height: 800px;
+    overflow: hidden;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+.Video {
+    width: 100%;
+    height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.Content {
+    position: absolute;
+    top: 0;
+    color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.SubContent {
+    text-align: center;
+    padding: 10px;
+}
+
+.SubContent p {
+    color: #eeeeeead;
+    font-size: 2rem;
+}
+
+.SubContent button {
+    font-weight: bold;
+    margin-top: 30px;
+    color: #f1f1f1;
+    border: #f1f1f1 1px solid;
+    padding: 10px 5px;
+    background-color: hsla(0, 0%, 0%, 0);
+    font-size: 1.25rem;
+    border-radius: 5px;
+}
+
+.SubContent button:hover {
+    background-color: #f1f1f1;
+    color: #000000c0;
+}
+
+.SubContent img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    border: #f1f1f1 1px solid;
+}
+
+.textAnim {
+    font-size: 5rem;
+    font-weight: bolder;
+    text-shadow: #000000b0;
+}
+
+/** text annimation **/
+@keyframes btn-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .textAnim {
+        animation: 3s linear 1s infinite alternate slidein;
+    }
+
+    .logo {
+        animation: 5s linear 1s infinite alternate slidein;
+    }
+}
+
+@keyframes slidein {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/** Menu deroulante des fiches**/
+@media (prefers-reduced-motion: no-preference) {
+    .buttonAdd {
+        animation: btn-spin infinite 10s linear;
+    }
+}
+
+.listeDiv {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.listeDiv ul {
+    display: none;
+    opacity: 0;
+    list-style: none;
+    transition: opacity 2s;
+}
+
+.listeDiv:hover ul {
+    display: block;
+    opacity: 1;
+}
+
+.listeDiv ul li {
+    display: block;
+    color: white;
+    background-color: #000211;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 5px 10px;
+}
+
+.listeDiv ul li:hover {
+    background-color: #0004dd;
+    color: #ffffff;
+}
+
+/**les categories de pages**/
+.A4 {
+    text-align: left !important;
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+
+    background: white;
+    box-shadow: #000000cc 3px 10px 5px 10px;
+    color: #000
+}
+
+.A5V {
+    width: 148.5mm;
+    height: 210mm;
+    box-shadow: #000000cc 10px 10px 5px 10px;
+    padding: 45px;
+    margin: auto;
+    background-color: #fff;
+    text-align: left !important;
+    color: #000;
+}
+
+
+.A5 {
+    width: 210mm;
+    height: 149mm;
+    padding: 60px 60px;
+    background-color: #fff;
+    text-align: left !important;
+    color: #000;
+}
+
+.A6 {
+    width: 210mm;
+    height: 170mm;
+    box-shadow: #000000cc 10px 10px 5px 10px;
+    padding: 60px 60px;
+    margin: auto;
+    background-color: #fff;
+    text-align: left !important;
+    color: #000;
+}
+
+
+.PetitDossier {
+    height: 40px;
+    width: 60px;
+    background-color: rgba(175, 175, 175, 0.726);
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+.envoyerBTN {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #001aff;
+    color: #fff;
+    padding: 1px;
+    font-size: 18px;
+    width: 30%;
+    margin: auto;
+}
+
+.envoyerBTN:hover {
+    border-radius: 40px;
+    background-color: #018d2f;
+}
+
+.btnMedecinToSkipPatient {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+    color: springgreen;
+    background-color: rgb(12, 8, 8);
+    border-radius: 15px;
+}
+
+
+.bg1 {
+    background: linear-gradient(90deg, rgb(48, 4, 4) 0%, rgb(0, 0, 0) 100%);
+}
+
+.bg2 {
+    background: linear-gradient(80deg, rgb(15, 1, 146) 0%, rgb(2, 2, 2) 100%);
+}
+
+.bg3 {
+    background: linear-gradient(87deg, rgb(15, 2, 136) 10%, rgb(0, 0, 0) 100%);
+}
+
+.bg4 {
+    background: linear-gradient(87deg, rgb(54, 4, 2) 10%, rgb(0, 0, 0) 100%);
+}
+
+.bg5 {
+    background: linear-gradient(87deg, rgb(51, 1, 1) 10%, rgb(0, 6, 39) 100%);
+}
+
+.drop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1.1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #f1f1f1;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    border-radius: 0.25rem;
+}
+
+.inputAnimated {
+    display: inline-block;
+    position: relative;
+    margin: 5px 10px;
+    min-width: 120px;
+}
+
+.inputAnimated input {
+    border: 0;
+    border-bottom: 2px solid #333;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.2s ease-in;
+    background: transparent;
+}
+
+.inputAnimated label {
+    font-size: 18px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+
+    color: wheat;
+}
+
+.btnValid {
+    background: #f83a00;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 10px;
+    font-family: Verdana;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 40px;
+    right: 90px;
+}
+
+.btnValid:hover {
+    background: #0004f8;
+}
+
+.buttonAdd {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 55px;
+    width: 55px;
+    background-color: #f53606;
+    color: #ffffff;
+    border-radius: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #0e06019f;
+}
+
+.buttonAdd:hover {
+    position: fixed;
+    background-color: #f50606;
+}
+
+/**Bouton d'impression**/
+.printBoutton {
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    background-color: #0400ff;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 50%;
+    right: 50px;
+}
+
+.printBoutton:hover {
+    background-color: #f73c03;
+}
+
+/**lOADING**/
+.loader {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-bottom: 5px solid rgb(0, 4, 255);
+    animation: animate 3s linear infinite;
+    margin-top: 25%;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    border-bottom: 3px solid rgb(0, 255, 0);
+    animation: animate 2s linear infinite
+}
+
+.loader::after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    bottom: 22px;
+    right: 22px;
+    border-radius: 50%;
+    border-bottom: 2px solid red;
+    animation: animate 1s linear infinite
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(50deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/**Page 404**/
+.notFound {
+    background-image: url("../img/gif404.gif");
+    background-attachment: fixed;
+    background-size: cover;
+}
